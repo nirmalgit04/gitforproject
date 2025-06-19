@@ -1,0 +1,24 @@
+package com.example.api.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.api.beans.Student;
+
+@RestController
+public class StudentController {
+	@GetMapping("/student")
+	public Student getStudents() {
+		return new Student(1,"Nirmal","barik");
+	}
+	@GetMapping("/students")
+	public List<Student> getStudents() {
+		List<Student> students=new ArrayList<>();
+		
+		return students;
+	}
+
+}

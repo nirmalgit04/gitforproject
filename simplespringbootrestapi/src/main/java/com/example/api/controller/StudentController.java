@@ -1,0 +1,35 @@
+package com.example.api.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.api.beans.Student;
+
+@RestController
+public class StudentController {
+	@GetMapping("/student")
+	public Student getStudent() {
+		return ( new Student(1,"Nirmal","barik"));
+	}
+	@GetMapping("/students")
+	public List<Student> getStudents() {
+		List<Student> students=new ArrayList<>();
+		students.add( new Student(1,"Nirmal","barik"));
+		students.add( new Student(2,"Shreyansh","barik"));
+		students.add( new Student(3,"Shree","barik"));
+		students.add( new Student(4,"Deepika","barik"));
+		return students;
+	}
+	
+	@GetMapping("/students/{id}")
+	public Student getStudentsbyusingpathvariabl(@PathVariable int id) {
+		
+		return( new Student(id,"Nirmal","barik"));
+		
+	}
+
+}

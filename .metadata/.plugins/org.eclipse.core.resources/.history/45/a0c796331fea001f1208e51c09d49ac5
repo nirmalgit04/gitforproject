@@ -1,0 +1,36 @@
+package com.example.user.service;
+
+import lombok.AllArgsConstructor;
+
+import org.springframework.stereotype.Service;
+
+import com.example.user.bean.User;
+import com.example.user.repo.UserRepository;
+
+
+
+@Service
+@AllArgsConstructor
+public class UserServiceImpl implements UserService {
+
+    private UserRepository userRepository;
+
+    @Override
+    public User saveUser(User user) {
+
+      
+
+        User savedUser = userRepository.save(user);
+
+        
+
+        return savedUser;
+    }
+
+    @Override
+    public User getUSerByName(String name) {
+        User user = userRepository.findByUserName(name);
+       
+        return user;
+    }
+}
