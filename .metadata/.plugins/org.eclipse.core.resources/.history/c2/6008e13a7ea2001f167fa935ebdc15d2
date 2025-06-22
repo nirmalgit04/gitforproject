@@ -1,0 +1,12 @@
+package com.designpattern.creational;
+
+public class SingletonDesign {
+	
+	private static SingletonDesign singletonDesign;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

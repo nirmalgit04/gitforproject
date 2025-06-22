@@ -1,0 +1,24 @@
+package com.designpattern.creational;
+
+public class SingletonDesign {
+
+	private static SingletonDesign singletonDesign;
+
+	private SingletonDesign() {
+
+	}
+
+	public static SingletonDesign getInstance() {
+
+		if (singletonDesign == null) {
+			singletonDesign = new SingletonDesign();
+		}
+		return singletonDesign;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

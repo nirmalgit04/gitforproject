@@ -1,0 +1,17 @@
+package com.designpattern;
+
+import com.designpattern.creational.SingletonDesign;
+
+public class Main {
+	//private static final String Singleton s1  = null;
+
+	public static void main(String[] args) {
+		SingletonDesign s1 =new SingletonDesign();
+		
+		Class cls = Class.forName("GFG"); 
+		  
+        // Creating object of main class 
+        // using instance method 
+        GFG obj = (GFG)cls.newInstance();
+	}
+}

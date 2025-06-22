@@ -1,0 +1,32 @@
+package com.designpattern.creational;
+
+public class SingletonDesign {
+
+	private static SingletonDesign singletonDesign;
+
+	private SingletonDesign() {
+
+	}
+
+	public static SingletonDesign getInstance() {
+
+		if (singletonDesign == null) {
+			synchronized {
+			singletonDesign = new SingletonDesign();
+			}
+		}
+		return singletonDesign;
+	}
+
+	public static void main(String[] args) {
+		SingletonDesign s1=SingletonDesign.getInstance();
+		System.out.println(s1.hashCode());
+		SingletonDesign s2=SingletonDesign.getInstance();
+		System.out.println(s2.hashCode());
+		
+		SingletonDesign s3=new SingletonDesign() ;
+		System.out.println(s3.hashCode());
+
+	}
+
+}

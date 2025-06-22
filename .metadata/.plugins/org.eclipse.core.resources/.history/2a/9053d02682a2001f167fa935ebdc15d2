@@ -1,0 +1,11 @@
+package com.designpattern.creational;
+
+public class SingletonDesignLazy {
+	
+	private static SingletonDesignLazy singletonDesignLazy = new SingletonDesignLazy();
+	
+	public static SingletonDesignLazy getInstance() {		
+		return singletonDesignLazy;
+	}
+
+}
